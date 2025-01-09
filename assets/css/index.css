@@ -1,0 +1,511 @@
+*{
+  user-select: none;
+}
+body{
+  padding: 0%;
+  margin: 0
+  ;
+}
+::-webkit-scrollbar {
+  width: .5em;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.759);
+  border-radius: 1rem;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+.connectivity-section {
+    background-image: url(../img/graph.png);
+    background-position: center;
+    background-color: #1d1d1d; 
+    height: 91vh;
+    width: 100%; 
+    color: white; 
+}
+
+.connectivity-section .container {
+    height: 100%; 
+}
+
+.connectivity-section .row {
+    height: 100%;
+}
+
+.connectivity-section .col-md-6 {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.connectivity-section .text-content {
+    text-align: left;
+    max-width: 80%; 
+}
+
+.connectivity-section h1 {
+    font-family: "Space Grotesk", serif;
+    font-size: 70px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.connectivity-section p{ 
+font-family: "Space Grotesk", serif;
+
+}
+.connectivity-section .description {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.connectivity-section img {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 8px; 
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  .index-h{
+    font-size: 35px !important;
+  }
+    .connectivity-section h1 {
+        font-size: 28px;
+    }
+
+    .connectivity-section .description {
+        font-size: 16px;
+    }
+
+    .connectivity-section .text-content {
+        text-align: center;
+    }
+
+    .connectivity-section img {
+        max-width: 90%;
+        margin-top: 20px;
+    }
+}
+/* Services Section */
+.services-section {
+    background-color: #1d1d1d;
+    padding: 60px 20px;
+}
+
+.service-card  {
+    
+font-family: "Space Grotesk", serif;
+
+    background-color: #1d1d1d;
+    border: 2px solid #2e2e2e;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color:#dddddd;
+    width: 100%;
+  }
+
+  .service-card img {
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    padding: 10px; 
+
+  }
+
+  .service-card .check-icon {
+    color: #28a745;
+    margin-right: 10px;
+  }
+
+  @media (min-width: 768px) {
+    .service-card {
+      width: 370px; 
+      margin: 20px;
+    }
+
+    .col-md-6 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+   /* Main heading styling */
+   .main-heading {
+    font-family: "Space Grotesk", serif;
+    font-size: 40px;
+    text-align: left; 
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 40px; 
+  }
+
+  /* Pill badge styling */
+  .pill-badge {
+    
+font-family: "Space Grotesk", serif;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 50px;
+    background-color: #1d1d1d;
+    color: white;
+    font-size: 18px;
+    border: 1px solid white;
+    margin-bottom: 20px;
+    margin-left: 0;
+  }
+  @media (max-width: 767px) {
+    .main-heading {
+      font-size: 23px; 
+    }
+    .pill-badge{
+        font-size: 15px;
+    }
+  }
+  .about-section{
+    
+font-family: "Space Grotesk", serif;
+
+  }
+  
+  .about-section p{
+    color: #dddddd;
+  }
+  .portfolio-card {
+    position: relative;
+    overflow: hidden;
+
+  }
+
+  .portfolio-card img {
+    width: 100%;
+    height: auto;
+      
+    transition: transform 0.3s ease;
+  }
+
+  .portfolio-card:hover img {
+    transform: scale(1.05);
+  }
+   /* Trust Line Styling */
+  .trust-line {
+    font-family: "Space Grotesk", serif;
+    font-size: 15px;
+    font-weight:400;
+    color: #1d1d1d;
+    padding-top: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+
+  /* Image Slider Styling */
+  .slider-container {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slider-images {
+    display: flex;
+    animation: slide 20s infinite linear;
+  }
+
+  .slider-img {
+    width: 100%;
+    max-width: 200px;
+    margin-right: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  /* Adding hover effect on images for a dynamic look */
+  .slider-img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Keyframes for the image slider animation */
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Left Side Styling */
+.since-heading {
+  font-size: 18px;
+  font-weight:400;
+  
+  font-family: "Space Grotesk", serif;
+  margin-top: 40px;
+}
+
+.forward-heading {
+  
+  font-family: "Space Grotesk", serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.client-says-heading {
+  
+  font-family: "Space Grotesk", serif;
+  font-size: 18px;
+  font-weight: 200;
+  margin-top: 20px;
+}
+
+.thin-line {
+  border-top: 2px solid #555;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.client-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.stat-item h4 {
+  
+  font-family: "Space Grotesk", serif;
+  font-size: 45px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.stat-item p {
+  
+  font-family: "Space Grotesk", serif;
+  font-size: 18px;
+  color: #bbb;
+}
+
+/* Review Section Styling */
+.review-container {
+  position: relative;
+  height: 600px; 
+  overflow: hidden;
+}
+
+
+/* Review Card Styling */
+.review-card {
+  background-color: #222222;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px 0;
+  color: white;
+  opacity: 0.9;
+  transition: opacity 0.5s ease;
+  
+  font-family: "Space Grotesk", serif;
+}
+
+.review-card:hover {
+  opacity: 1;
+}
+
+.rating {
+  margin-bottom: 15px;
+}
+
+.rating i {
+  font-size: 15px;
+}
+
+.review-text {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.client-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ccc;
+}
+.position-name{
+  font-size: 15px;
+  font-weight: 200;
+  color: #f08f74;
+}
+
+.client-picture {
+  margin-top: 15px;
+}
+
+.client-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);  
+  }
+  100% {
+    transform: translateY(-100%); 
+  }
+}
+
+/* Pause Animation on Hover */
+.review-container:hover .review-cards {
+  animation-play-state: paused; 
+}
+.review-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;  
+  margin-top: 10px; 
+}
+
+.client-picture {
+  margin-right: 15px; 
+}
+
+.client-img {
+  width: 50px; 
+  height: 50px;
+  border-radius: 50%; 
+}
+
+.client-details {
+  display: flex;
+  flex-direction: column; 
+}
+
+.client-name {
+  font-weight: bold;
+  padding: 0%;
+  margin: 0%;
+}
+
+.position-name {
+  font-size: 0.9rem;
+  padding: 0%;
+  margin: 0%;
+  color: #f08f74; 
+}
+@media (max-width: 767.98px) {
+  .no-ms-small {
+    margin-left: 0 !important;
+  }
+}
+.review-cards {
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 30s infinite linear;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0); 
+  }
+  100% {
+    transform: translateY(-100%); 
+  }
+}
+
+/* Fix for seamless looping */
+.review-cards {
+  position: relative;
+  animation-timing-function: linear;
+}
+
+.review-container {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+/* Pause Animation on Hover */
+.review-container:hover .review-cards {
+  animation-play-state: paused;
+}
+
+
+.review-container:before,
+.review-container:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px; 
+  pointer-events: none;
+  z-index: 2;
+}
+
+.review-container:before {
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
+}
+
+.review-container:after {
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent); 
+}
+
+.full-width-project-section {
+  position: relative;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 550px; 
+  min-height: 400px; 
+  background-position: center;
+  margin-top: 0; 
+  width: 100%; 
+}
+
+.section-title {
+  
+  font-family: "Space Grotesk", serif;
+  font-size: 70px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.section-subtitle {
+  
+  font-family: "Space Grotesk", serif;
+  font-size: 70px;
+  font-weight:bold;
+  text-decoration: underline;
+  margin: 10px 0 0;
+  color:#e2ba16;
+ }
+ @media (max-width: 767.98px) {
+  .section-title {
+    font-size: 40px; 
+  }
+
+  .section-subtitle {
+    font-size: 40px;
+  }
+}

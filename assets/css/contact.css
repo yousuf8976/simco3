@@ -1,0 +1,237 @@
+*{
+    user-select: none;
+  }
+  
+::-webkit-scrollbar {
+    width: .5em;
+    height: 0;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: black;
+    width: 15px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.759);
+    border-radius: 1rem;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+.contact-page {
+    
+    position: relative;
+    overflow: hidden; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+    margin-top: 30px;
+    color: white;
+}
+.pill-badge {
+    font-family: "Space Grotesk", serif;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 50px;
+    background-color: #1d1d1d;
+    color: white;
+    font-size: 18px;
+    border: 1px solid white;
+    margin-bottom: 20px;
+    margin-left: 0;
+}
+
+.contact-right {
+    flex: 2;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: auto; 
+ }
+
+@media (max-width: 768px) {
+    .contact-right {
+        margin-left: 0; 
+    }
+
+    .form-group {
+        flex-direction: column; 
+    }
+
+    .form-label {
+        margin: 0;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .form-control {
+        width: 100%; 
+    }
+    .main{
+        font-size: 35px;
+    }
+}
+
+@media (min-width: 769px) {
+    .contact-right {
+        margin-left: 130px; 
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; 
+    margin: 10px 0;
+    color: white;
+}
+
+.form-control {
+    background: transparent;
+    border: 1px solid lightgrey;
+    padding: 10px;
+    flex: 1; 
+    transition: border-color 0.3s ease;
+    color: white;
+}
+
+.form-control:hover {
+    border-color: white;
+}
+
+.btn-pill {
+    background: transparent;
+    border: 1px solid #fff; 
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    color: white;
+    border-radius: 50px;
+}
+
+.btn-pill:hover {
+    background: rgb(255, 255, 255); 
+    color: black;
+}
+
+.social-media {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.social-media li {
+    display: inline;
+}
+
+.social-media a {
+    color:#ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+.phones {
+    font-size: 30px !important;
+    font-weight: bold !important;
+    font-family: "Space Grotesk", serif;
+    color:#fff !important;
+}
+.main{
+   
+    font-size: 55px;
+    font-family: "Space Grotesk", serif;
+}
+.social-media{
+    
+    font-family: "Space Grotesk", serif;
+}
+.main1{
+    color:#ddd;
+    font-family: "Space Grotesk", serif;
+}
+.contact-form {
+
+    padding: 20px;
+    border-radius: 8px;
+ 
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    color:white;
+    background-color: #1d1d1d;
+}
+
+.contact-form .pill-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color:transparent;
+    color: white;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form .pill-button:hover {
+    background-color:white;
+    color: black;
+}
+@media (max-width: 768px) {
+    .phones{
+        color: white !important;
+    }
+    .main {
+        font-size: 40px; 
+    }
+    
+    .contact-form label {
+        border-color: white; 
+    }
+}
+
+  .contact-page::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    width: 60vw; 
+    height: 60vw; 
+    max-width: 500px; 
+    max-height: 500px;
+    background-color: #202020; 
+    border-radius: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: -1;
+  }
+ 
+  @media (max-width: 768px) {
+    .contact-page::before {
+      width: 80vw; 
+      height: 80vw;
+      max-width: 400px;
+      max-height: 400px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-page::before {
+      width: 90vw;  
+      height: 90vw; 
+      max-width: 300px;
+      max-height: 300px;
+    }
+  }

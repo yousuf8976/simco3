@@ -1,0 +1,155 @@
+/* Navbar styling */
+.navbar {
+    background-color: #1d1d1d; /* Dark background */
+    padding: 0; /* No padding */
+    font-family: "Space Grotesk", serif;
+    font-weight: 500;
+
+    border-bottom: 2px solid #333; /* Grey bottom border */
+}
+
+.navbar-brand img {
+    width: 160px;
+    height: 50px;
+    display: block; /* Ensures logo is centered */
+    margin: 0 auto; /* Center the logo */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Centering the links */
+    text-align: center;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    text-decoration: none; /* Remove underline */
+    margin: 0 17px; /* Add horizontal spacing between links */
+}
+
+.navbar-toggler {
+    border: none; /* Remove border around the toggle icon */
+    color: white; /* Set toggle icon color to white */
+}
+
+.navbar-toggler-icon {
+    background-color: transparent; /* Hamburger icon with no background color */
+}
+
+/* Dropdown menu styles */
+.navbar-nav .dropdown:hover .dropdown-menu,
+.navbar-nav .dropdown-menu:hover {
+    display: block; /* Ensure menu stays open on hover */
+    animation: fadeIn 0.5s ease;
+    opacity: 1; /* Ensure full visibility */
+    pointer-events: auto; /* Allow interaction */
+}
+
+.navbar-nav .dropdown-menu {
+    display: none; /* Initially hidden */
+    background-color: #1a1a1a;
+    border: 1px solid #393939;
+    color: white; /* Ensure text color is visible */
+    border-radius: 4px;
+    opacity: 0;
+    min-width: 250px;
+    pointer-events: none; /* Prevent accidental interaction */
+    transition: opacity 0.5s ease;
+}
+
+.navbar-nav .dropdown-menu.show {
+    opacity: 1; /* Ensure visibility */
+    pointer-events: auto; /* Enable interaction */
+}
+
+.navbar-nav .dropdown-menu .dropdown-item {
+    font-size: 14px;
+    padding: 10px 15px;
+    background-color: transparent;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: transparent; /* No color change on hover */
+}
+
+/* Dropdown Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px); /* Slide in from below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+    .navbar-nav .nav-link {
+        font-weight: 400 !important;
+        font-size: 17px !important; /* Increase font size for nav links */
+        text-align: left; /* Align links to the left */
+        margin: 0; /* Remove margin between links */
+        border-bottom: 0.5px solid #333; /* Add a border-bottom to each link */
+        padding: 10px 0; /* Add padding for spacing */
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+    .navbar-nav {
+        flex-direction: column; /* Align links to the left */
+    }
+
+    .navbar-nav .nav-link {
+        
+        text-align: left; /* Align links to the left */
+        margin: 0; /* Remove margin between links */
+    }
+
+    .navbar-toggler {
+        margin-right: 0; /* Remove right margin */
+    }
+}
+
+.navbar-nav .dropdown-menu .dropdown-item {
+    position: relative; /* Required for the pseudo-element */
+    padding-left: 25px; /* Add space for the line in the default state */
+    color: white;
+    transition: padding-left 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+/* Line on hover */
+.navbar-nav .dropdown-menu .dropdown-item::before {
+    content: ''; /* Pseudo-element content */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Center the line vertically */
+    width: 0; /* Start with no width */
+    height: 3px; /* Line thickness */
+    background-color: white; /* Line color */
+    transition: width 0.3s ease; /* Smooth transition for the line */
+}
+
+/* On hover */
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    padding-left: 35px; /* Move the text slightly to the right */
+    color: #f8f8f8; /* Optional: Change text color slightly */
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover::before {
+    width: 15px; /* Line expands to 15px on hover */
+}
+
+/* Optional: Subtle animation for smoother effect */
+.navbar-nav .dropdown-menu .dropdown-item {
+    transition: all 0.3s ease; /* Ensures smooth movement and styling */
+}
